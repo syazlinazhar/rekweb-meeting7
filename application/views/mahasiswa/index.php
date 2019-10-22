@@ -5,7 +5,6 @@
         <a href="" class="btn btn-primary">Add Data Mahasiswa</a>
     </div>
 </div>
-
 <div class="row mt-3">
     <div class="col-md-6">
     <h3>Register Mahasiswa</h3>
