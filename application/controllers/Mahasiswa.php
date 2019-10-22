@@ -37,6 +37,13 @@ class Mahasiswa extends CI_Controller {
         }
 
     }
+
+    public function delete($id)
+    {
+        $this->Mahasiswa_model->deleteDataMahasiswa($id);
+        $this->session->set_flashdata('flash', 'Deleted');
+        redirect('mahasiswa');
+    }
 }
 
 
