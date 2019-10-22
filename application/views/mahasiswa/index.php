@@ -17,9 +17,31 @@
         <a href="<?= base_url(); ?>mahasiswa/add" class="btn btn-primary">Add Data Mahasiswa</a>
     </div>
 </div>
+
+<div class="row mt-3">
+    <div class="col-md-6">
+        <form action="" method="post">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Find Data Mahasiswa.." name="keyword">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Find</button>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
 <div class="row mt-3">
     <div class="col-md-6">
     <h3>Register Mahasiswa</h3>
+
+    <?php if( empty($mahasiswa) ) : ?>
+            <div class="alert alert-danger" role="alert">
+        Data is not found. 
+        </div>
+    <?php endif; ?>
+
         <ul class="list-group">
         <?php foreach( $mahasiswa as $mhs ) : ?>
             <li class="list-group-item"><?= $mhs['name'] ?>
