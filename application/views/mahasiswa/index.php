@@ -24,6 +24,8 @@
         <?php foreach( $mahasiswa as $mhs ) : ?>
             <li class="list-group-item"><?= $mhs['name'] ?>
             <a href="<?= base_url(); ?>mahasiswa/delete/<?= $mhs['id'] ?>" class="badge badge-danger float-right" onclick="return confirm('confirm?');">delete</a>
+
+            <a href="<?= base_url(); ?>mahasiswa/details/<?= $mhs['id'] ?>" class="badge badge-primary float-right">details</a>
         </li>
         <?php endforeach; ?>
         </ul>
