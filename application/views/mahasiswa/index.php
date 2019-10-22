@@ -22,7 +22,9 @@
     <h3>Register Mahasiswa</h3>
         <ul class="list-group">
         <?php foreach( $mahasiswa as $mhs ) : ?>
-            <li class="list-group-item"><?= $mhs['name'] ?></li>
+            <li class="list-group-item"><?= $mhs['name'] ?>
+            <a href="<?= base_url(); ?>mahasiswa/delete/<?= $mhs['id'] ?>" class="badge badge-danger float-right" onclick="return confirm('confirm?');">delete</a>
+        </li>
         <?php endforeach; ?>
         </ul>
     </div>
