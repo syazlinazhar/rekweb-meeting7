@@ -11,7 +11,6 @@ class Mahasiswa extends CI_Controller {
     
     public function index()
     {
-        var_dump(base_url());
         $data['title'] = 'Register Mahasiswa';
         $data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
         $this->load->view('templates/header', $data);
@@ -45,6 +44,16 @@ class Mahasiswa extends CI_Controller {
         $this->session->set_flashdata('flash', 'Deleted');
         redirect('mahasiswa');
     }
+
+    public function details($id)
+    {
+        $data['title'] = 'Details Mahasiswa';
+        $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('mahasiswa/details', $data);
+        $this->load->view('templates/footer');
+    }
+
 }
 
 
