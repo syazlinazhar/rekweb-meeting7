@@ -11,6 +11,7 @@ class Mahasiswa extends CI_Controller {
     
     public function index()
     {
+        var_dump(base_url());
         $data['title'] = 'Register Mahasiswa';
         $data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
         $this->load->view('templates/header', $data);
