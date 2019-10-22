@@ -8,8 +8,10 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title"><?= $mahasiswa['name']; ?></h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h6 class="card-subtitle mb-2 text-muted"><?= $mahasiswa['matric']; ?></h6>
+                    <p class="card-text"><?= $mahasiswa['email']; ?></p>
+                    <p class="card-text"><?= $mahasiswa['course']; ?></p>
+                    <a href="<?= base_url(); ?>mahasiswa" class="btn btn-primary">Back</a>
                 </div>
             </div>
         </div>
