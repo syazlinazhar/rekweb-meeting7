@@ -9,6 +9,7 @@
             </div>
             <div class="card-body">
                 <form action="" method="post">
+                    <input type="hidden" name="id" value="<?= $mahasiswa['id'] ?>">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" name="name" class="form-control" id="name" value="<?= $mahasiswa['name']; ?>">
@@ -32,7 +33,11 @@
                         <label for="course">Course</label>
                         <select class="form-control" id="course" name="course">
                             <?php foreach( $course as $c) : ?>
+                            <?php if( $c == $mahasiswa['course']) : ?>
+                                <option value="<?= $c; ?>" selected><?= $c; ?></option>
+                            <?php else : ?>
                                 <option value="<?= $c; ?>"><?= $c; ?></option>
+                            <?php endif; ?> 
                             <?php endforeach; ?>
                         </select>
                     </div>
