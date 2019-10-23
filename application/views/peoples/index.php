@@ -19,7 +19,7 @@
             <?php foreach ($peoples as $people) : ?>
 
             <tr>
-             <th>1</th>
+             <th><?= ++$start; ?></th>
              <td><?= $people['name']; ?></td>
              <td><?= $people['email']; ?></td>
              <td>
@@ -32,7 +32,10 @@
         <?php endforeach; ?>
 
         </tbody>
-        </table>        
+        </table> 
+
+        <?= $this->pagination->create_links(); ?>
+
         </div>
     </div>
 </div>

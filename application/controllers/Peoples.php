@@ -14,8 +14,20 @@ class Peoples extends CI_Controller {
         $data['title'] = 'List of Peoples';
         
         $this->load->model('Peoples_model', 'peoples');
-        
-        $data['peoples'] = $this->peoples->getAllPeoples();
+
+        // PAGINATION
+        $this->load->library('pagination');
+ 
+        // config
+        $config['base_url'] = 'http://localhost/rekweb/meeting5/peoples/index'; 
+        $config['total_rows'] = $this->peoples->countAllPeoples();
+        $config['per_page'] = 12; 
+
+        // initialize
+        $this->pagination->initialize($config);
+
+        $data['start'] = $this->uri->segment(3);
+        $data['peoples'] = $this->peoples->getPeoples($config['per_page'], $data['start']);
         
         // if( $this->input->post('keyword') ) {
         //     $data['mahasiswa'] = $this->Mahasiswa_model->findDataMahasiswa();
