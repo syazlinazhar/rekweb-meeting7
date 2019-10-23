@@ -3,10 +3,10 @@
     
 
         <div class="row">
-            <div class="col">
+            <div class="col-md-6">
                 <form action="<?= base_url('peoples'); ?>" method="post">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search keyword.." name="keyword">
+                        <input type="text" class="form-control" placeholder="Search keyword.." name="keyword" autocomplete="off" autofocus>
                         <div class="input-group-append">
                             <input class="btn btn-primary" type="submit" name="submit">
                     </div>
