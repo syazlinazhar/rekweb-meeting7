@@ -1,10 +1,25 @@
 <div class="container">
+    <h3 class="mt-3">List of Peoples</h3>
+    
+
+        <div class="row">
+            <div class="col">
+                <form action="<?= base_url('peoples'); ?>" method="post">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search keyword.." name="keyword">
+                        <div class="input-group-append">
+                            <input class="btn btn-primary" type="submit" name="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     <div class="row">
         <div class="col-md-6">
-        
-        <h3 class="mt-3">List of Peoples</h3>
-
-
         <table class="table">
             <thead>
                 <tr>
